@@ -8,27 +8,27 @@
  */
 int main(void)
 {
-	int num1, num2;
+	int a, b;
 
-	for (num1 = 0; num1 <= 98; num1++)
+	for (a = 0; a < 100; a++)
 	{
-		for (num2 = num1 + 1; num2 <= 99; num2++)
+		for (b = 1; b < 100; b++)
 		{
-			putchar((num1 / 10) + '0');
-			putchar((num1 % 10) + '0');
-			putchar(' ');
-			putchar((num2 / 10) + '0');
-			putchar((num2 % 10) + '0');
-
-			if (num1 == 98 && num2 == 99)
-				continue;
-
-			putchar(',');
-			putchar(' ');
+			if (a < b)
+			{
+				putchar((a / 10) + '0');
+				putchar((a % 10) + '0');
+				putchar(' ');
+				putchar((b / 10) + '0');
+				putchar((b % 10) + '0');
+				if (!(a == 98 && b == 99))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
